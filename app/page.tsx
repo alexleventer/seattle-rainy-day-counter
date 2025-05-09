@@ -1,6 +1,7 @@
 import { RainCounter } from "@/components/rain-counter"
 import { WeatherDisplay } from "@/components/weather-display"
 import { AlertCircle } from "lucide-react"
+import { LastUpdated } from '@/components/LastUpdated'
 
 export default function Home() {
   return (
@@ -28,6 +29,15 @@ export default function Home() {
         <footer className="text-center text-sm text-slate-400">
           Data updates hourly. Weather data provided by OpenWeatherMap.
         </footer>
+
+        <div className="bg-white/30 p-8 rounded-lg shadow-lg mt-8">
+          <h2 className="text-2xl font-semibold mb-4">Current Rainfall Data</h2>
+          <div className="space-y-4">
+            <p>Today's rainfall: 0.5 inches</p>
+            <p>Weekly total: 2.3 inches</p>
+            <LastUpdated timestamp={new Date()} />
+          </div>
+        </div>
       </div>
     </main>
   )
