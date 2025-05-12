@@ -56,7 +56,7 @@ export function RainCounter() {
       <div
         className={cn("flex items-center justify-center p-2 text-black", isRaining ? "bg-red-500" : "bg-yellow-500")}
       >
-        <h2 className="text-xl font-bold uppercase tracking-wider">Days Since Last Rain in Seattle</h2>
+        <h2 className="text-xl font-bold uppercase tracking-wider">Days Since Last Rain in Yuma</h2>
       </div>
       <CardContent className="p-6">
         {loading ? (
