@@ -5,6 +5,7 @@ import { Cloud, CloudRain, Sun, AlertTriangle, AlertCircle } from "lucide-react"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { getCurrentWeather } from "@/lib/weather"
+import { DataFreshness } from "@/components/data-freshness"
 
 type WeatherData = {
   temperature: number
@@ -14,6 +15,7 @@ type WeatherData = {
   condition: string
   isFallback?: boolean
   error?: string
+  timestamp?: string
 }
 
 export function WeatherDisplay() {
@@ -109,6 +111,8 @@ export function WeatherDisplay() {
                 Using fallback weather data. Some information may not be accurate.
               </p>
             )}
+
+            <DataFreshness timestamp={weather.timestamp || new Date().toISOString()} />
           </div>
         ) : null}
       </CardContent>
