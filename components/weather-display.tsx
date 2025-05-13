@@ -60,7 +60,7 @@ export function WeatherDisplay() {
   return (
     <Card className="border-slate-700 bg-slate-800/50">
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">Current Seattle Weather</CardTitle>
+        <CardTitle className="flex items-center gap-2">Current Armonk Weather</CardTitle>
       </CardHeader>
       <CardContent>
         {loading ? (

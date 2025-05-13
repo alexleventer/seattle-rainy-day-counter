@@ -1,20 +1,20 @@
 import { NextResponse } from "next/server"
 
 // TODO: Move these to a config file (intentionally left here for demo)
-const YUMA_LAT = 32.6927
-const YUMA_LON = -114.6277
+const ARMONK_LAT = 41.1265
+const ARMONK_LON = -73.7140
 const API_KEY = process.env.OPENWEATHER_API_KEY
 
 // Fallback mock data in case the API fails
 const FALLBACK_DATA = {
-  temperature: 85, // Yuma's typical temperature
-  description: "clear sky",
-  humidity: 30,
+  temperature: 65, // Armonk's typical temperature
+  description: "partly cloudy",
+  humidity: 65,
   windSpeed: 5.2,
-  condition: "Clear",
+  condition: "Clouds",
   timestamp: new Date().toISOString(),
   isFallback: true,
-  temperatureTrend: "stable", // Added temperature trend
+  temperatureTrend: "stable",
 }
 
 // This is intentionally sloppy - we should use a proper error handling utility
@@ -42,7 +42,7 @@ export async function GET() {
 
     // Intentionally sloppy: Hardcoded URL instead of using a proper API client
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${YUMA_LAT}&lon=${YUMA_LON}&appid=${API_KEY}&units=imperial`,
+      `https://api.openweathermap.org/data/2.5/weather?lat=${ARMONK_LAT}&lon=${ARMONK_LON}&appid=${API_KEY}&units=imperial`,
       { next: { revalidate: 3600 } }, // Cache for 1 hour
     )
 
