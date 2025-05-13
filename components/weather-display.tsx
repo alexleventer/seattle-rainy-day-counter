@@ -5,6 +5,7 @@ import { Cloud, CloudRain, Sun, AlertTriangle, AlertCircle } from "lucide-react"
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { getCurrentWeather } from "@/lib/weather"
+import { TemperatureTrend } from "@/components/temperature-trend"
 
 type WeatherData = {
   temperature: number
@@ -14,6 +15,7 @@ type WeatherData = {
   condition: string
   isFallback?: boolean
   error?: string
+  temperatureTrend?: 'rising' | 'falling' | 'stable'
 }
 
 export function WeatherDisplay() {
@@ -90,6 +92,9 @@ export function WeatherDisplay() {
               <div>
                 <p className="text-3xl font-bold">{Math.round(weather.temperature)}°F</p>
                 <p className="capitalize text-slate-300">{weather.description}</p>
+                {weather.temperatureTrend && (
+                  <TemperatureTrend trend={weather.temperatureTrend} />
+                )}
               </div>
             </div>
 
