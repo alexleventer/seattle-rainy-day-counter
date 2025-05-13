@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-slate-800 to-slate-900 p-4 text-white">
       <div className="w-full max-w-3xl space-y-8">
-        <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">Armonk Rain Tracker</h1>
+        <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl">Armonk Weather Tracker</h1>
+        <p className="text-center text-slate-400">Your local weather companion for Armonk, NY</p>
         <div className="grid gap-8 md:grid-cols-2">
           <RainCounter />
           <WeatherDisplay />

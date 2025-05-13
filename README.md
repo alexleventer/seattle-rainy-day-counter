@@ -1,14 +1,15 @@
-# Seattle Rainy Day Counter
+# Armonk Weather Tracker
 
-A modern web application that tracks and visualizes rainfall data in Seattle. Built with Next.js and React, this application provides an intuitive interface for monitoring precipitation patterns in the Seattle area.
+A modern web application that tracks and visualizes weather data in Armonk, NY. Built with Next.js and React, this application provides an intuitive interface for monitoring weather patterns in the Armonk area.
 
 ## Features
 
-- Real-time rainfall data visualization
+- Real-time weather data visualization
 - Historical precipitation tracking
 - Interactive charts and graphs
 - Responsive design for all devices
 - Dark/Light mode support
+- Temperature trend indicators
 
 ## Tech Stack
 
