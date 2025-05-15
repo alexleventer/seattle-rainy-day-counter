@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description: 'Created with v0',
   generator: 'v0.dev',
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
+    return ();
     <html lang="en">
       <body>{children}</body>
     </html>
